@@ -27,7 +27,9 @@
                 <div class="span2"> 
                     <img src="/Static/gfx/logotype.png" /> 
                 </div> 
-            <div class="span10"></div> 
+                <div class="span10">
+                    @{Html.RenderPartial("Navigation", Model);}
+                </div> 
             </div> 
         </div> 
         <hr /> 

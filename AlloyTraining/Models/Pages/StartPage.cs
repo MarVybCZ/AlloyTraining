@@ -16,11 +16,12 @@ namespace AlloyTraining.Models.Pages
         public virtual String Heading { get; set; }
 
         [CultureSpecific]
-        [Display(
-                    Name = "Main body",
+        [Display(Name = "Main body",
                     Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
-                    GroupName = SystemTabNames.Content,
-                    Order = 1)]
+                    GroupName = SystemTabNames.Content, Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
+
+        [Display(GroupName = SystemTabNames.Content, Order = 300)]
+        public virtual ContentArea MainContentArea { get; set; }
     }
 }

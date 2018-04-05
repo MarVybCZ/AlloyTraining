@@ -9,10 +9,10 @@ using EPiServer.Web;
 namespace AlloyTraining.Models.Pages
 {
     [ContentType(DisplayName = "Alloy Product Page", GUID = "318a83b6-afd0-4cbe-86ac-9d5e909122f4", Description = "")]
-    public abstract class ProductPage : StandardPage
+    public class ProductPage : StandardPage
     {
         [Display(GroupName = SystemTabNames.Content, Order = 305)]
         [UIHint(UIHint.Textarea)]
-        public string UniqueSellingPoints { get; set; }
+        public virtual string UniqueSellingPoints { get; set; }
     }
 }
