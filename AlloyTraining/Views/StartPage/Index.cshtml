@@ -6,6 +6,6 @@
     @(Model.CurrentPage.Heading ?? Model.CurrentPage.PageName)
 </h1>
 <div>
-    @Html.PropertyFor(m => m.CurrentPage.MainBody)
+    @Html.PropertyFor(m => m.CurrentPage.MainBody)    
 </div>
 @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "border", tag = "span4" })

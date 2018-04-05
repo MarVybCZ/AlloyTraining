@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using AlloyTraining.Models.Blocks;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -18,6 +19,13 @@ namespace AlloyTraining.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 310)]
         public virtual XhtmlString MainBody { get; set; }
+
+        [Display(
+            Name = "Teaser",
+            Description = "Teaser",
+            GroupName = SystemTabNames.Content,
+            Order = 320)]
+        public virtual TeaserBlock Teaser { get; set; }
 
     }
 }
