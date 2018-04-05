@@ -14,5 +14,13 @@ namespace AlloyTraining.Models.Pages
         [Display(GroupName = SystemTabNames.Content, Order = 305)]
         [UIHint(UIHint.Textarea)]
         public virtual string UniqueSellingPoints { get; set; }
+
+        [Display(GroupName = SystemTabNames.Content, Order = 320)]
+        [UIHint(UIHint.Textarea)]
+        public virtual ContentArea MainContentArea { get; set; }
+
+        [Display(GroupName = SystemTabNames.Content, Order = 330)]
+        [UIHint(UIHint.Textarea)]
+        public virtual ContentArea RelatedContentArea { get; set; }
     }
 }

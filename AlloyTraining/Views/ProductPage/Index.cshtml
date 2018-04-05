@@ -1,4 +1,6 @@
-﻿@model AlloyTraining.Models.ViewModels.DefaultPageViewModel<ProductPage>
+﻿@using AlloyTraining.Models.Pages
+
+@model AlloyTraining.Models.ViewModels.DefaultPageViewModel<ProductPage>
 
 @{
     //ViewBag.Title = "Index";
@@ -9,13 +11,19 @@
 
 <p class="introduction" @Html.EditAttributes(x => x.CurrentPage.MetaDescription)>@Model.CurrentPage.MetaDescription</p>
 
-<div class="row"> 
-    <div class="span8 clearfix"> 
-    @Html.PropertyFor(x => x.CurrentPage.MainBody) 
-        </div> 
-    </div> @section RelatedContent { <div @Html.EditAttributes(x => x.CurrentPage.PageImage)> <img src="@Url.ContentUrl(Model.CurrentPage.PageImage)" /> </div> 
-        <div class="block colorBox theme1"> 
-        <h2 @Html.EditAttributes(x => x.CurrentPage.PageName)> @Model.CurrentPage.PageName </h2> 
-        <p>@Html.PropertyFor(x => x.CurrentPage.UniqueSellingPoints)</p> 
-                    </div> }
+<div class="row">
+    <div class="span8 clearfix">
+        @Html.PropertyFor(x => x.CurrentPage.MainBody)
+    </div>
+</div>
+@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "border", tag = "span8" })
+
+@section RelatedContent {
+    <div @Html.EditAttributes(x => x.CurrentPage.PageImage)> <img src="@Url.ContentUrl(Model.CurrentPage.PageImage)" /> </div>
+    <div class="block colorBox theme1">
+        <h2 @Html.EditAttributes(x => x.CurrentPage.PageName)> @Model.CurrentPage.PageName </h2>
+        <p>@Html.PropertyFor(x => x.CurrentPage.UniqueSellingPoints)</p>
+    </div>
+    @Html.PropertyFor(x => x.CurrentPage.RelatedContentArea, new { CssClass = "border", tag = "span4" })
+}
 

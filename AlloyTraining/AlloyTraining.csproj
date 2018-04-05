@@ -227,6 +227,7 @@
     <Compile Include="Business\ExtensionMethods.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\PagePartialController.cs" />
+    <Compile Include="Controllers\PagePartialWideController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
@@ -246,6 +247,7 @@
   <ItemGroup>
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Properties\" />
+    <Folder Include="Views\PagePartialWide\" />
     <Folder Include="Views\PagePartial\" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +322,7 @@
     <Content Include="Views\ProductPage\Index.cshtml" />
     <Content Include="Views\Shared\Navigation.cshtml" />
     <Content Include="Views\Shared\PagePartials\PagePartial.cshtml" />
+    <Content Include="Views\Shared\PagePartials\PagePartialWide.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
