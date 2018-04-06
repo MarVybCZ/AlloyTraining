@@ -105,6 +105,9 @@
     <Reference Include="EPiServer.Logging.Log4Net, Version=2.2.2.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.Logging.Log4Net.2.2.2\lib\net461\EPiServer.Logging.Log4Net.dll</HintPath>
     </Reference>
+    <Reference Include="EPiServer.Search.Cms, Version=9.0.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Search.Cms.9.0.1\lib\net461\EPiServer.Search.Cms.dll</HintPath>
+    </Reference>
     <Reference Include="EPiServer.Search.IndexingService, Version=9.0.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.Search.9.0.1\lib\net461\EPiServer.Search.IndexingService.dll</HintPath>
     </Reference>
@@ -234,6 +237,7 @@
     <Compile Include="Controllers\PagePartialWideController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
+    <Compile Include="Controllers\SearchPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Controllers\TeaserBlockController.cs" />
@@ -248,6 +252,7 @@
     <Compile Include="Models\Pages\NewsPage.cs" />
     <Compile Include="Models\Pages\PreviewBlock.cs" />
     <Compile Include="Models\Pages\ProductPage.cs" />
+    <Compile Include="Models\Pages\SearchPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
@@ -255,6 +260,7 @@
     <Compile Include="Models\ViewModels\DefaultPageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ListingBlockModel.cs" />
+    <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -270,9 +276,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="IndexingService\IndexingService.svc" />
+    <Content Include="modules\_protected\EPiServer.Search.Cms\IndexContent.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="module.config" />
+    <Content Include="modules\_protected\EPiServer.Search.Cms\module.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -344,6 +352,7 @@
     <Content Include="Views\ListingBlock\Index.cshtml" />
     <Content Include="Views\NewsPage\Index.cshtml" />
     <Content Include="Views\Shared\SubNavigation.cshtml" />
+    <Content Include="Views\SearchPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
