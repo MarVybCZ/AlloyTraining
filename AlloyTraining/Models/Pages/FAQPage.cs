@@ -12,6 +12,6 @@ namespace AlloyTraining.Models.Pages
     public class FAQPage : SitePageData
     {
         [Ignore]
-        public IList<FAQItem> FAQItems { get; set; }
+        public virtual IList<FAQItem> FAQItems { get; set; }
     }
 }
