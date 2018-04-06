@@ -38,11 +38,14 @@ namespace AlloyTraining.Models.ViewModels
         {
             PropertyCriteriaCollection criteria = new PropertyCriteriaCollection();
 
+            var contentTypeRepository = ServiceLocator.Current.GetInstance<IContentTypeRepository>();
+            var pageTypeList = contentTypeRepository.List().OfType<PageType>();
+
             PropertyCriteria prodpagecriterion = new PropertyCriteria();
             prodpagecriterion.Condition = CompareCondition.Equal;
             prodpagecriterion.Name = "PageTypeID";
             prodpagecriterion.Type = PropertyDataType.PageType;
-            prodpagecriterion.Value = "ProductPage";//"318a83b6-afd0-4cbe-86ac-9d5e909122f4";
+            prodpagecriterion.Value = pageTypeList.Where(x => x.Name == "ProductPage").First().ID.ToString();// PageType.Load("ProductPage").ID.ToString();
             prodpagecriterion.Required = true;
             criteria.Add(prodpagecriterion);
 
