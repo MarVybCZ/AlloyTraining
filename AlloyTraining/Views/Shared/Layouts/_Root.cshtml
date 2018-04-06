@@ -22,18 +22,19 @@
     @Html.RenderEPiServerQuickNavigator()
     @Html.FullRefreshPropertiesMetaData()
     <div class="container">
-        <div class="row"> 
-            <div id="header"> 
-                <div class="span2"> 
-                    <img src="/Static/gfx/logotype.png" /> 
-                </div> 
+        <div class="row">
+            <div id="header">
+                <div class="span2">
+                    <img src="/Static/gfx/logotype.png" />
+                </div>
                 <div class="span10">
                     @{Html.RenderPartial("Navigation", Model);}
-                </div> 
-            </div> 
-        </div> 
-        <hr /> 
+                </div>
+            </div>
+        </div>
+        <hr />
         @RenderBody()
+        @{Html.RenderPartial("Footer", new FooterModel(Model.CurrentPage));}
     </div>
 </body>
 </html>

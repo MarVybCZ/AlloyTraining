@@ -258,6 +258,7 @@
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\ViewModels\BlockEditPageViewModel.cs" />
     <Compile Include="Models\ViewModels\DefaultPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\FooterModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ListingBlockModel.cs" />
     <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
@@ -265,6 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Properties\" />
+    <Folder Include="Resources\LanguageFiles\" />
     <Folder Include="Views\PagePartialWide\" />
     <Folder Include="Views\PagePartial\" />
   </ItemGroup>
@@ -353,6 +355,7 @@
     <Content Include="Views\NewsPage\Index.cshtml" />
     <Content Include="Views\Shared\SubNavigation.cshtml" />
     <Content Include="Views\SearchPage\Index.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
