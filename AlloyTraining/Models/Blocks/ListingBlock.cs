@@ -19,12 +19,10 @@ namespace AlloyTraining.Models.Blocks
                 public virtual string Name { get; set; }
          */
 
-        [CultureSpecific]
-        [Display(Name = "Heading", Description = "", GroupName = SystemTabNames.Content, Order = 100)]
-        public virtual string Heading { get; set; }
+        [Display(GroupName = SystemTabNames.Content, Order = 100)]
+        public virtual String Heading { get; set; }
 
-        [CultureSpecific]
-        [Display(Name = "RootPage", Description = "", GroupName = SystemTabNames.Content, Order = 200)]
+        [Display(GroupName = SystemTabNames.Content, Order = 200)]
         public virtual PageReference RootPage { get; set; }
     }
 }

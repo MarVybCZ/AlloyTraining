@@ -10,7 +10,10 @@
         <div class="listResult theme1">
             <h3>@Html.PageLink(item)</h3>
             <p class="date">
-                @item.StartPublish.ToString()
+                @if (item.StartPublish != null)
+                {
+                    @item.StartPublish.ToString()
+                }
             </p>
             @if (item.Property["MainBody"] != null)
             {

@@ -8,7 +8,7 @@ namespace AlloyTraining.Models.ViewModels
 {
     public class ListingBlockModel
     {
-        public virtual string Heading { get; set;  }
-        public virtual IEnumerable<PageData> Items { get; set; }
+        public String Heading { get; set; }
+        public IEnumerable<PageData> Items { get; set; }
     }
 }
