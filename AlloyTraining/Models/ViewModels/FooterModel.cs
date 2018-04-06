@@ -42,7 +42,7 @@ namespace AlloyTraining.Models.ViewModels
             prodpagecriterion.Condition = CompareCondition.Equal;
             prodpagecriterion.Name = "PageTypeID";
             prodpagecriterion.Type = PropertyDataType.PageType;
-            prodpagecriterion.Value = "318a83b6-afd0-4cbe-86ac-9d5e909122f4";
+            prodpagecriterion.Value = "ProductPage";//"318a83b6-afd0-4cbe-86ac-9d5e909122f4";
             prodpagecriterion.Required = true;
             criteria.Add(prodpagecriterion);
 
